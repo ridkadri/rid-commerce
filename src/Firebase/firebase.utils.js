@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-    apiKey: "AIzaSyDU5JZ1Cfl9sO8SBraNAYJ49sJ8sWXP40c",
+    apiKey: "YOUR-API-KEY",
     authDomain: "rid-commerce.firebaseapp.com",
     databaseURL: "https://rid-commerce.firebaseio.com",
     projectId: "rid-commerce",
