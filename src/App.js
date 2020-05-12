@@ -64,6 +64,7 @@ class App extends React.Component {
   }
 }
 
+//when we made user signed in redirect to homepage
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
