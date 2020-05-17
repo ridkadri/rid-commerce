@@ -17,12 +17,11 @@ import {auth, createUserProfileDocument} from './Firebase/firebase.utils';
 import {setCurrentUser} from './Redux/User/user.actions';
 import {selectCurrentUser} from './Redux/User/user.selector';
 
-
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUser} = this.props
+    const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -71,7 +70,7 @@ class App extends React.Component {
 
 //when we made user signed in redirect to homepage
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 })
 
 const mapDispatchToProps = dispatch => ({
