@@ -88,27 +88,27 @@ export function* signInAfterSignUp({payload: {user, additionalData}}) {
 }
 
 export function* onGoogleSignInStart() {
-    yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START,signInWithGoogle)
+    yield takeLatest(UserActionTypes.GOOGLE_SIGN_IN_START,signInWithGoogle);
 }
 
 export function* onEmailSignInStart() {
-    yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail)
+    yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
 }
 
 export function* onCheckUserSession() {
-    yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated)
+    yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
 }
 
 export function* onSignOutStart() {
-    yield takeLatest(UserActionTypes.SIGN_OUT_START,signOut)
+    yield takeLatest(UserActionTypes.SIGN_OUT_START,signOut);
 }
 
 export function* onSignUpStart() {
-    yield takeLatest(UserActionTypes.SIGN_UP_START,signUp)
+    yield takeLatest(UserActionTypes.SIGN_UP_START,signUp);
 }
 
 export function* onSignUpSuccess() {
-    yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS,signInAfterSignUp)
+    yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS,signInAfterSignUp);
 }
 
 
